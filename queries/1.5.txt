@@ -1,0 +1,4 @@
+SELECT post.text FROM post
+ LEFT JOIN used_tags ON post.id = used_tags.Post_id 
+WHERE used_tags.Post_id IS NULL 
+GROUP BY post.text;

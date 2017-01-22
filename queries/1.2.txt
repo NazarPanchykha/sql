@@ -1,0 +1,1 @@
+select count(*) as 'Todays Posts' from post where date = current_date() ;

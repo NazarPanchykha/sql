@@ -1,0 +1,1 @@
+SELECT tag.text as 'Tag',  COUNT(post.id) as 'Tags number' FROM tag INNER JOIN used_tags ON tag.id = used_tags.Tag_id LEFT JOIN post ON used_tags.Post_id = post.id GROUP BY tag.text;

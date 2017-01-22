@@ -1,0 +1,3 @@
+select post.id as ID, post.text as Post, group_concat(tag.text) as 'Tags List' From post inner join used_tags 
+on post.id = used_tags.Post_id
+left join tag on used_tags.Tag_id = tag.id group by post.text;
